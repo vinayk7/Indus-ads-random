@@ -245,8 +245,8 @@
                 data.rows = data.rows.sort((a,b) => { return b.publishTime - a.publishTime }); // fix the orders BUG:dailyhunt
                 
                 
-                newsArr1 = data.rows.slice(0,10); // 9 render now
-                newsArr2 = data.rows.slice(10); // 6 for later use (Loadmore)
+                newsArr1 = data.rows.slice(0,10); // 10 render now
+                newsArr2 = data.rows.slice(10); // 15-10 = 5 for later use (Loadmore)
 
                 var sel1,sel2,low1,low2;
                 if(smallAdInterval < bigAdInterval)
@@ -271,8 +271,8 @@
                 var $allNews = document.getElementById('all_news')
                 var $smallAd = document.getElementById(sel1);
 
-                //9 news
-                for(var i =0; i<9; i++)
+                //10 news
+                for(var i =0; i<10; i++)
                 {
                     let html = getnewsItemHtml(i, newsArr1[i]);
                     if(i<low1)
